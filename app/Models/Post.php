@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\Post;
+
+
 use App\Models\Film_Ghibli;
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User;

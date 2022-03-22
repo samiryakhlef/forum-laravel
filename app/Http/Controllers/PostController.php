@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Actions\PostUpdateAction;
 use Illuminate\Support\Facades\Gate;
 use App\Http\Requests\StorePostRequest;
-use App\Http\Controllers\PostController;
+
 
 class PostController extends Controller
 {
