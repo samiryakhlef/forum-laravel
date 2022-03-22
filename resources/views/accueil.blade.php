@@ -62,6 +62,20 @@
             </div>
         </div>
     </nav>
+@foreach ($posts as $post)
+    <h1 class="row flex justify-content-center my-2"> {{$post->title}}</h1> </h1>
+    <section class="container my-3">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <img src="images/princesse-mononoke.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
 
-    <h1 class="text-center my-3"> page d'accueil pour soso </h1>
+                        <h2> <strong>Tritre:</strong> </h2>
+                        <p class="card-text">{{$post->content}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @endforeach 
 </body>
