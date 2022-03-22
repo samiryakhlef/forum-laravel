@@ -68,12 +68,22 @@
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 100%;">
-                    <img src="images/princesse-mononoke.jpg" class="card-img-top" alt="...">
+                    <img src=  "{{ asset('/storage/'. $post ->picture)}} " >
                     <div class="card-body">
 
-                        <h2> <strong>Tritre:</strong> </h2>
+                        <h2> <strong>{{$post->created_at}}</strong> </h2>
                         <p class="card-text">{{$post->content}}
                         </p>
+                        <form action="{{ url('users') }}" method="POST">
+     
+        <label for="nom">Modifié le poste </label>
+        <input type="text" name="title" id="title">
+        <input type="text" name="picture" id="picture">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Envoyer !">
+    </form>
+
+
                     </div>
                 </div>
             </div>
