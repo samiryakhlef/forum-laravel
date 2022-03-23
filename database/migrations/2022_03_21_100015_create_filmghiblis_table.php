@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('film_ghiblis', function (Blueprint $table) {
+        Schema::create('filmghiblis', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('synopsis');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('film__ghiblis');
+        Schema::dropIfExists('filmghiblis');
     }
 };

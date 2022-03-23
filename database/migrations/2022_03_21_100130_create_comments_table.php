@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('film_id');
-            $table->foreign('film_id')->references('id')->on('film_ghiblis');
+            $table->foreign('film_id')->references('id')->on('filmghiblis');
         });
     }
 

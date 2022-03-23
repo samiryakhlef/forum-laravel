@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\filmsGhibliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('accueil');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-
 Route::get('/page', function(){
     return view('page');
 });
+
+
+Route::get('/',[filmsGhibliController::class, "allFilms"])->name("filmspage");
+Route::get('/filmGhibli/{id}',[filmsGhibliController::class, "displayOne"])->name("filmpage");

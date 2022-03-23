@@ -62,6 +62,5 @@
             </div>
         </div>
     </nav>
-
-    <h1 class="text-center my-3"> page d'accueil pour soso </h1>
+    
 </body>
